@@ -1,0 +1,17 @@
+<h1>Cats:</h1>
+<% @cats.each do |cat| %>
+  <%= cat.name %><br/>
+<% end %>
+
+<h1>Users:</h1>
+<% @users.each do |user| %>
+  <%= user.username %><br/>
+  <%= 'Email: ' + user.email %><br/>
+  <%= 'Age: ' + user.age.to_s %><br/><br/>
+<% end %>
+
+<h1>Todos:</h1>
+<% @todos.each do |todo| %>
+  <%= todo.tasks + ': ' + todo.finished.to_s %><br/>
+<% end %><br/>
+<%= link_to("Create new to-do item", 'todos/new') %>
